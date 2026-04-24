@@ -370,59 +370,90 @@
   }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+  
+  /* ══════════════════════════════
+     手機版 (≤700px)
+  ══════════════════════════════ */
   @media (max-width: 700px) {
+
+    /* Hero */
     .hero {
       grid-template-columns: 1fr;
-      grid-template-rows: 260px auto;
+      grid-template-rows: 240px auto;
       min-height: unset;
     }
-    .hero-right {
-      grid-row: 1;
-      min-height: 260px;
-      height: 260px;
-    }
-    .hero-img-fade {
-      background: linear-gradient(to bottom, transparent 50%, #F9D4A2 100%);
-    }
-    .hero-left {
-      grid-row: 2;
-      padding: 28px 20px 40px;
-    }
-    .hero h1 { font-size: 26px; }
-    .hero-desc { font-size: 14px; max-width: 100%; }
-    .s-tag { font-size: 12px; padding: 6px 13px; }
-    .container { padding: 0 16px; }
-    .concept-section, .treat-section, .summary-section { padding: 52px 0; }
-    .daily-section { padding: 52px 0; }
-    .sec-heading { font-size: 22px; }
-    .sec-sub { font-size: 14px; margin-bottom: 28px; }
-    .concept-grid { grid-template-columns: 1fr; gap: 14px; }
-    .c-card { padding: 22px 22px 22px 26px; }
-    .treat-list { gap: 16px; }
-    .t-card { grid-template-columns: 64px 1fr; border-radius: 18px; }
-    .t-side { padding: 20px 8px; }
-    .t-num { font-size: 10px; }
-    .t-big { font-size: 28px; }
-    .t-icon { width: 24px; height: 24px; border-radius: 6px; }
-    .t-icon svg { width: 12px; height: 12px; }
-    .t-body { padding: 18px 16px; }
-    .t-title { font-size: 17px; margin-bottom: 8px; }
-    .t-desc { font-size: 13px; margin-bottom: 14px; }
-    .t-tag { font-size: 11px; padding: 4px 11px; }
-    .acupoints { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-    .acu-item { padding: 10px 8px; }
-    .acu-name { font-size: 14px; }
-    .acu-loc { font-size: 10px; }
-    .daily-grid { grid-template-columns: 1fr; gap: 12px; }
-    .d-item { padding: 20px; }
-    .summary-inner { padding: 36px 20px; }
-    .summary-inner h2 { font-size: 20px; }
-    .summary-inner p { font-size: 14px; }
-    .sum-pill { font-size: 12px; padding: 7px 16px; }
-    .summary-inner::after { font-size: 140px; }
+    .hero-right { grid-row: 1; min-height: 240px; height: 240px; }
+    .hero-img-fade { background: linear-gradient(to bottom, transparent 40%, #F9D4A2 100%); }
+    .hero-left { grid-row: 2; padding: 24px 18px 36px; }
+    .hero-badge { font-size: 11px; padding: 5px 13px; }
+    .hero h1 { font-size: 24px; margin-bottom: 12px; }
+    .hero-desc { font-size: 13px; max-width: 100%; margin-bottom: 20px; }
+    .s-tag { font-size: 12px; padding: 6px 12px; }
+
+    /* Layout */
+    .container { padding: 0 14px; }
+    .sec-heading { font-size: 21px; }
+    .sec-sub { font-size: 13px; margin-bottom: 24px; }
+    .concept-section, .treat-section, .summary-section { padding: 44px 0; }
+    .daily-section { padding: 44px 0; }
+
+    /* Concept cards */
+    .concept-grid { grid-template-columns: 1fr; gap: 12px; }
+    .c-card { padding: 18px 18px 18px 22px; }
+    .c-card h3 { font-size: 15px; }
+    .c-card p { font-size: 13px; }
+
+    /* Treatment cards */
+    .treat-list { gap: 14px; }
+    .t-card { grid-template-columns: 58px 1fr; border-radius: 16px; }
+    .t-side { padding: 18px 6px; gap: 6px; }
+    .t-num { font-size: 9px; }
+    .t-big { font-size: 26px; }
+    .t-icon { width: 22px; height: 22px; }
+    .t-icon svg { width: 11px; height: 11px; }
+    .t-body { padding: 16px 14px; }
+    .t-title { font-size: 16px; margin-bottom: 7px; }
+    .t-desc { font-size: 13px; margin-bottom: 12px; line-height: 1.8; }
+    .t-tag { font-size: 11px; padding: 4px 10px; }
+
+    /* Acupoint image */
+    .t-img-wrap img { max-height: 180px; }
+    .acu-pills { gap: 6px; }
+
+    /* Daily section */
+    .daily-grid { grid-template-columns: 1fr; gap: 10px; }
+    .d-item { padding: 18px; border-radius: 14px; }
+    .d-item h4 { font-size: 14px; }
+    .d-item p { font-size: 12px; }
+
+    /* Summary */
+    .summary-inner { padding: 28px 16px; border-radius: 20px; }
+    .summary-inner h2 { font-size: 18px; }
+    .summary-inner p { font-size: 13px; }
+    .sum-pill { font-size: 11px; padding: 6px 14px; }
+    .summary-inner::after { font-size: 110px; }
+
+    /* waizhi box */
+    .waizhi-box { padding: 14px 16px; gap: 10px; }
+
+    /* Footer */
+    footer { padding: 20px 14px; }
+    footer div { letter-spacing: 0.02em; }
+
+    /* Lightbox */
+    .lb-overlay img { max-width: 95vw; max-height: 82vh; }
   }
+
+  /* 超小螢幕 (≤380px) */
   @media (max-width: 380px) {
-    .hero h1 { font-size: 23px; }
+    .hero h1 { font-size: 21px; }
+    .hero-right { height: 200px; min-height: 200px; }
+    .t-card { grid-template-columns: 52px 1fr; }
+    .t-big { font-size: 22px; }
+    .t-title { font-size: 15px; }
+    .sec-heading { font-size: 19px; }
+  }
+
     .acupoints { grid-template-columns: repeat(2, 1fr); }
   }
 
